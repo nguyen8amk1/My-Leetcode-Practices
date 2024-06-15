@@ -22,12 +22,13 @@ const printLinkedList = (head) => {
 }
 
 const createLinkedList = (arr) => {
-    if(arr.length < 1) return null;
+    if (arr.length < 1) return null;
     const head = new ListNode(arr[0]);
     let current = head; 
-    for(let i = 1; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
+        //console.log(current.val);
         current.setNext(new ListNode(arr[i]));
-        current = head.next;
+        current = current.next;
     }
     return head; 
 }
